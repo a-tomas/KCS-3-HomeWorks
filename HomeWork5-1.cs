@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -10,11 +6,10 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 10, 20, 30, 10, 10, 50, 20, 40, 20, 40, 40, 20, 60, 60, 80, 60, 60, 30 };
+            int[] numbers = { 10, 20, 30, 10, 10, 70, 20, 40, 20, 80, 40, 20, 90, 60, 30, 60, 60, 30 };
             int[] numbersX = new int[numbers.Length];
             Array.Copy(numbers, numbersX, numbers.Length);
 
-            int[] duplicateNumbers = new int[numbers.Length];
             int counter = 0;
 
             for (int i = 0; i < numbers.Length; i++)
@@ -25,12 +20,10 @@ namespace ConsoleApp2
                     if (numbers[i] == numbers[j])
                     {
                         counter++;
-                        //Console.WriteLine(counter);
                     }
                 }
                 if (counter > 1)
                 {
-                    //Console.WriteLine("{0} number, counter {1}, index {2}", numbers[i], counter,indexDuplicated);
                     for (int k = i + 1; k < numbersX.Length; k++)
                     {
                         if (numbers[i] == numbers[k])
@@ -47,6 +40,7 @@ namespace ConsoleApp2
                 }
                 counter = 0;
             }
+            Console.Write("Pasikartojantys skaiciai: ");
             foreach (int x in numbersX)
             {
                 if (x > 0)
