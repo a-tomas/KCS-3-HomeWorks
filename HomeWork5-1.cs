@@ -10,7 +10,7 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 10, 20, 30, 10, 10, 50, 20, 40, 20, 40, 40, 20,60,60,80,60,60,30 };
+            int[] numbers = { 10, 20, 30, 10, 10, 50, 20, 40, 20, 40, 40, 20, 60, 60, 80, 60, 60, 30 };
             int[] numbersX = new int[numbers.Length];
             Array.Copy(numbers, numbersX, numbers.Length);
 
